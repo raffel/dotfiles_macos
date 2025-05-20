@@ -1,8 +1,8 @@
 local colors <const> = {
   black = 0xff181819,
   white = 0xfff8f8f2,
-  red = 0xf1cc3e44,
-  green = 0xff8aff81,
+  red = 0xf1FD6592,
+  green = 0xff007692,
   blue = 0xff5199ba,
   yellow = 0xffffff81,
   orange = 0xfff4c07b,

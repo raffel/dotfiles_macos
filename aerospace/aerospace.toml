@@ -1,10 +1,11 @@
 # AEROSPACE CONFIG
+#https://github.com/edunfelt/base16-rose-pine-scheme/blob/main/assets/palette.png
 start-at-login = true
 
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFEBBF83 inactive_color=0x33434c5e width=4.0'
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFFFBE69 inactive_color=0x33434c5e width=6.0'
 #     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
@@ -38,7 +39,7 @@ key-mapping.preset = 'qwerty'
 [gaps]
 #outer.bottom numbers have to match presentation.sh variables. built-in retina display is excluded from presentation mode, so this only works on external monitors.
 outer.bottom =        [{monitor.'^built-in retina display$' = 20 }, 40]
-outer.top =        [{monitor.'^built-in retina display$' = 27 }, 82]
+outer.top =        [{monitor.'^built-in retina display$' = 30 }, 82]
 outer.left =       40
 outer.right =      40
 inner.horizontal = 40
@@ -63,7 +64,7 @@ cmd-g = 'mode join'
 cmd-q = [
   'close --quit-if-last-window'
 ]
-cmd-w = []
+#cmd-w = []
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
