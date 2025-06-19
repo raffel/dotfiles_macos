@@ -5,7 +5,7 @@ start-at-login = true
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFFFBE69 inactive_color=0x33434c5e width=6.0'
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFFFBE69 inactive_color=0xFF007692 width=8.0'
 #     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
@@ -64,7 +64,7 @@ cmd-g = 'mode join'
 cmd-q = [
   'close --quit-if-last-window'
 ]
-#cmd-w = []
+cmd-w = []
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -79,8 +79,9 @@ cmd-q = [
 
 # All possible modifiers: cmd, alt, ctrl, shift
 
-cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
-cmd-m = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
+#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
+#cmd-m = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
 
 cmd-shift-f = 'macos-native-fullscreen'
 cmd-f = 'fullscreen'
