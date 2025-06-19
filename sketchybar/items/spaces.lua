@@ -22,7 +22,7 @@ local spaceConfigs <const> = {
   ["3"] = { icon = "󰖟", name = "Browser" },
   ["4"] = { icon = "", name = "AltBrowser" },
   ["5"] = { icon = "", name = "Remote" },
-  ["6"] = { icon = "", name = "Database" },
+  ["6"] = { icon = "", name = "Planner" },
   ["7"] = { icon = "󰊻", name = "Chat" },
   ["8"] = { icon = "", name = "Mail" },
   ["9"] = { icon = "", name = "Music" },
