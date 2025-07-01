@@ -43,3 +43,9 @@
 # resize-overlay-duration = 4s 200ms
 macos-titlebar-style = hidden
 theme = rose-pine
+quit-after-last-window-closed = true
+quick-terminal-animation-duration = 1
+window-padding-x = 45
+window-padding-y = 20
+window-inherit-working-directory = false
+confirm-close-surface = false
