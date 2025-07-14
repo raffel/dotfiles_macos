@@ -47,5 +47,15 @@ quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
 window-padding-x = 45
 window-padding-y = 20
+#window-padding-color = extend
+#window-padding-balance = true
+#background-opacity = 0.75
+#window-padding-balance = false
+
+
+
+##background = 192019
 window-inherit-working-directory = false
 confirm-close-surface = false
+resize-overlay = never
+scrollback-limit = 4294967295
