@@ -60,7 +60,11 @@ cmd-r = [
 cmd-keypadMinus = 'resize smart -70'
 cmd-keypadPlus = 'resize smart +70'
 
-cmd-g = 'mode join'
+cmd-g = [
+   'mode join',
+   'exec-and-forget sketchybar --trigger send_message MESSAGE="JOIN MODE" HOLD="true"'
+]
+
 cmd-q = [
   'close --quit-if-last-window'
 ]
@@ -193,12 +197,20 @@ enter = [
 ]
 
 [mode.join.binding]
-h = ['join-with left', 'mode main']
-j = ['join-with down', 'mode main']
-k = ['join-with up', 'mode main']
-l = ['join-with right', 'mode main']
-cmd-h = ['join-with left', 'mode main']
-cmd-alt-h = ['join-with left', 'mode main']
+h = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+j = ['join-with down', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+k = ['join-with up', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+l = ['join-with right', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+cmd-h = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+cmd-alt-h = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+esc = [
+  'mode main',
+  'exec-and-forget sketchybar --trigger hide_message'
+]
+enter = [
+  'mode main',
+  'exec-and-forget sketchybar --trigger hide_message'
+]
 
 [[on-window-detected]]
 if.app-id = 'org.qutebrowser.qutebrowser'
