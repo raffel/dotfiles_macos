@@ -2,7 +2,7 @@ local padding <const> = {
   background = 8,
   icon = 10,
   label = 8,
-  bar = 39,
+  bar = 0,
   left = 12,
   right = 12,
   item = 18,
@@ -11,12 +11,12 @@ local padding <const> = {
 
 local graphics <const> = {
   bar = {
-    height = 36,
-    offset = 12,
+    height = 39,
+    offset = 0,
   },
   background = {
     height = 24,
-    corner_radius = 9,
+    corner_radius = 0,
   },
   slider = {
     height = 20,
@@ -25,7 +25,7 @@ local graphics <const> = {
     width = 200,
     large_width = 300,
   },
-  blur_radius = 30,
+  blur_radius = 0,
 }
 
 local text <const> = {

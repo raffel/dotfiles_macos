@@ -17,17 +17,15 @@ local currentWorkspaceWatcher = sbar.add("item", {
 -- copy "Icons" from the nerd fonts cheat sheet and replace icon and name accordingly below
 -- https://www.nerdfonts.com/cheat-sheet
 local spaceConfigs <const> = {
-  ["1"] = { icon = "󱞁", name = "Notes" },
+  ["1"] = { icon = "󰀶", name = "Finder" },
   ["2"] = { icon = "", name = "Terminal" },
-  ["3"] = { icon = "󰖟", name = "Browser" },
-  ["4"] = { icon = "", name = "AltBrowser" },
-  ["5"] = { icon = "", name = "Remote" },
-  ["6"] = { icon = "", name = "Planner" },
-  ["7"] = { icon = "󰊻", name = "Chat" },
-  ["8"] = { icon = "", name = "Mail" },
+  ["3"] = { icon = "", name = "Code" },
+  ["4"] = { icon = "󰖟", name = "Browser" },
+  ["5"] = { icon = "", name = "Chat" },
+  ["6"] = { icon = "󰊻", name = "Teams" },
+  ["7"] = { icon = "", name = "Mail" },
+  ["8"] = { icon = "", name = "Notes" },
   ["9"] = { icon = "", name = "Music" },
-  ["10"] = { icon = "󰌾", name = "Secrets" },
-  ["t"] = { icon = "", name = "Meeting" },
 }
 
 local function selectCurrentWorkspace(focusedWorkspaceName)

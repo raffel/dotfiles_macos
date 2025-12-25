@@ -1,11 +1,9 @@
-# AEROSPACE CONFIG
-#https://github.com/edunfelt/base16-rose-pine-scheme/blob/main/assets/palette.png
 start-at-login = true
 
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFFFBE69 inactive_color=0xFF007692 width=8.0'
+#     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFFFBE69 inactive_color=0xFF007692 width=8.0'
 #     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
@@ -31,7 +29,6 @@ enable-normalization-opposite-orientation-for-nested-containers = false
 accordion-padding = 30
 
 default-root-container-layout = 'tiles'
-
 default-root-container-orientation = 'auto'
 
 key-mapping.preset = 'qwerty'
@@ -83,12 +80,12 @@ cmd-w = []
 
 # All possible modifiers: cmd, alt, ctrl, shift
 
-#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
-cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
+cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
 #cmd-m = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
 
-cmd-shift-f = 'macos-native-fullscreen'
-cmd-f = 'fullscreen'
+#cmd-shift-f = 'macos-native-fullscreen'
+cmd-shift-f = 'fullscreen'
 
 alt-g = 'split horizontal'
 alt-v = 'split vertical'
@@ -111,18 +108,15 @@ cmd-shift-down = 'move down'
 cmd-shift-up = 'move up'
 cmd-shift-right = 'move right'
 
-#cmd-1 = 'summon-workspace 1'  # Notes
-cmd-1 = 'workspace --auto-back-and-forth 1'  # Notes
-cmd-2 = 'workspace --auto-back-and-forth 2'  # Terminal
-cmd-3 = 'workspace --auto-back-and-forth 3'  # Browser
-cmd-4 = 'workspace --auto-back-and-forth 4'  # AltBrowser
-cmd-5 = 'workspace --auto-back-and-forth 5'  # Remote
-cmd-6 = 'workspace --auto-back-and-forth 6'  # Database
-cmd-7 = 'workspace --auto-back-and-forth 7'  # Chat
-cmd-8 = 'workspace --auto-back-and-forth 8'  # Mail
-cmd-9 = 'workspace --auto-back-and-forth 9'  # Music
-cmd-0 = 'workspace --auto-back-and-forth 10' # Secrets
-cmd-t = 'workspace --auto-back-and-forth t'  # Meeting
+cmd-1 = 'workspace --auto-back-and-forth 1'
+cmd-2 = 'workspace --auto-back-and-forth 2'
+cmd-3 = 'workspace --auto-back-and-forth 3'
+cmd-4 = 'workspace --auto-back-and-forth 4'
+cmd-5 = 'workspace --auto-back-and-forth 5'
+cmd-6 = 'workspace --auto-back-and-forth 6'
+cmd-7 = 'workspace --auto-back-and-forth 7'
+cmd-8 = 'workspace --auto-back-and-forth 8'
+cmd-9 = 'workspace --auto-back-and-forth 9'
 
 cmd-shift-1 = 'move-node-to-workspace 1'
 cmd-shift-2 = 'move-node-to-workspace 2'
@@ -133,16 +127,14 @@ cmd-shift-6 = 'move-node-to-workspace 6'
 cmd-shift-7 = 'move-node-to-workspace 7'
 cmd-shift-8 = 'move-node-to-workspace 8'
 cmd-shift-9 = 'move-node-to-workspace 9'
-cmd-shift-0 = 'move-node-to-workspace 10'
-cmd-shift-t = 'move-node-to-workspace t'
 
 cmd-tab = 'workspace-back-and-forth'
-cmd-p = 'move-workspace-to-monitor --wrap-around next'
-cmd-shift-p = [
-  'move-node-to-monitor --wrap-around next',
-  'focus-monitor next --wrap-around' 
-]
-cmd-alt-h = []
+# cmd-p = 'move-workspace-to-monitor --wrap-around next'
+# cmd-shift-p = [
+#   'move-node-to-monitor --wrap-around next',
+#   'focus-monitor next --wrap-around' 
+# ]
+# cmd-alt-h = []
 
 cmd-shift-s = [
   'mode service',
@@ -151,25 +143,25 @@ cmd-shift-s = [
 
 [mode.service.binding]
 esc = [
- 'reload-config',
- 'exec-and-forget sketchybar --trigger hide_message',
- 'exec-and-forget sketchybar --reload',
- 'mode main'
+  'reload-config',
+  'exec-and-forget sketchybar --trigger hide_message',
+  'exec-and-forget sketchybar --reload',
+  'mode main'
 ]
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 
 s = [
-    'exec-and-forget cat ~/.config/aerospace/shrugstring| pbcopy',
-   'exec-and-forget sketchybar --trigger hide_message',
-   'mode main'
+  'exec-and-forget cat ~/.config/aerospace/shrugstring| pbcopy',
+  'exec-and-forget sketchybar --trigger hide_message',
+  'mode main'
 ] 
 
 b = [
-   'exec-and-forget ~/.config/aerospace/presentation.sh on',
-   'exec-and-forget sketchybar --bar height=0',
-   'exec-and-forget sketchybar --trigger hide_message',
-   'mode main'
+  'exec-and-forget ~/.config/aerospace/presentation.sh on',
+  'exec-and-forget sketchybar --bar height=0',
+  'exec-and-forget sketchybar --trigger hide_message',
+  'mode main'
 ]
 shift-b = [
    'exec-and-forget ~/.config/aerospace/presentation.sh off',
@@ -213,44 +205,38 @@ enter = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'org.qutebrowser.qutebrowser'
-run = ['layout tiling', 'move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'com.apple.finder'
 run = ['layout tiling', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = [
-'layout floating'
-]
+if.app-id = 'org.alacritty'
+run = ['move-node-to-workspace 2']  
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'              
-run = ['move-node-to-workspace 9']  
+if.app-id = 'com.microsoft.VSCode'              
+run = ['move-node-to-workspace 3']  
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'              
-run = ['move-node-to-workspace 7']  
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'              
-run = ['move-node-to-workspace 8']  
-
-[[on-window-detected]]
-if.app-id = 'com.bitwarden.desktop'              
-run = ['move-node-to-workspace 10']  
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.edgemac'              
+if.app-id = 'app.zen-browser.zen'              
 run = ['move-node-to-workspace 4']  
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.rdc.macos'              
+if.app-id = 'net.whatsapp.WhatsApp'              
 run = ['move-node-to-workspace 5']  
 
 [[on-window-detected]]
-if.app-id = 'org.jkiss.dbeaver.core.product'              
+if.app-id = 'com.microsoft.teams2'              
 run = ['move-node-to-workspace 6']  
+
+[[on-window-detected]]
+if.app-id = 'it.bloop.airmail2'              
+run = ['move-node-to-workspace 7']  
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'              
+run = ['move-node-to-workspace 8']  
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'              
+run = ['move-node-to-workspace 9']  
 
