@@ -65,3 +65,6 @@ alias rm='rm -v'
 
 # only throw errors when no globs match anything
 setopt CSH_NULL_GLOB
+
+source ~/.config/zsh/rose-pine-zsh/rose-pine-zsh.zsh
+colorize_zsh rose-pine
