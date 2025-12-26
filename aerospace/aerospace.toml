@@ -40,7 +40,7 @@ cmd-keypadMinus = 'resize smart -70'
 cmd-keypadPlus = 'resize smart +70'
 cmd-g = ['mode join']
 cmd-q = ['close --quit-if-last-window']
-cmd-w = []
+#cmd-w = []
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
