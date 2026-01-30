@@ -8,12 +8,16 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
+#setopt noglob
 
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export EDITOR="nvim"
+export TERM="xterm-256color"
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
@@ -44,11 +48,11 @@ _fzf_compgen_dir() {
 
 # ----- Bat (better cat) -----
 
-export BAT_THEME=rose-pine
+export BAT_THEME="Catppuccin Mocha"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -98,8 +102,10 @@ alias gx="gitx --all"
 alias gx="ign = ls-files -o -i --exclude-standard"
 alias grmc="git rm -r --cached"
 
-# only throw errors when no globs match anything
-setopt CSH_NULL_GLOB
+alias mpv="noglob mpv"
+alias yt-dlp="noglob yt-dlp"
 
-source ~/.config/zsh/rose-pine-zsh/rose-pine-zsh.zsh
-colorize_zsh rose-pine
+export PATH="${PATH}:/Users/raffel/.local/lib/python3.13/site-packages"
+
+export VCPKG_ROOT=~/repositories/vcpkg
+export PATH=$VCPKG_ROOT:$PATH
