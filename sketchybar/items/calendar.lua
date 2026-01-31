@@ -16,11 +16,11 @@ local cal = sbar.add("item", "widgets.calendar", {
 			size = 9.0,
 		},
 		string = icons.calendar,
-		color = colors.white,
+		color = colors.text,
 		padding_left = 8,
 	},
 	label = {
-		color = colors.white,
+		color = colors.text,
 		padding_right = 8,
 		width = 105,
 		align = "right",
@@ -33,9 +33,9 @@ local cal = sbar.add("item", "widgets.calendar", {
 	padding_left = 1,
 	padding_right = 1,
 	background = {
-		color = colors.bg1,
-		border_color = colors.rainbow[#colors.rainbow],
-		border_width = 1,
+		color = colors.base,
+		border_color = colors.text,
+		border_width = 0,
 	},
 })
 

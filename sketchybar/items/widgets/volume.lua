@@ -43,9 +43,9 @@ local volume_icon = sbar.add("item", "widgets.volume2", {
 
 local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", { volume_icon.name, volume_percent.name }, {
 	background = {
-		color = colors.bg1,
-		border_color = colors.rainbow[#colors.rainbow - 3],
-		border_width = 1,
+		color = colors.base,
+		border_color = colors.text,
+		border_width = 0,
 	},
 	popup = {
 		align = "center",
@@ -64,7 +64,7 @@ local volume_slider = sbar.add("slider", popup_width, {
 		background = {
 			height = 6,
 			corner_radius = 3,
-			color = colors.bg1,
+			color = colors.base,
 		},
 		knob = {
 			string = "􀀁",
@@ -72,7 +72,7 @@ local volume_slider = sbar.add("slider", popup_width, {
 		},
 	},
 	background = {
-		color = colors.bg1,
+		color = colors.base,
 		height = 2,
 		y_offset = -20,
 	},
@@ -147,7 +147,7 @@ local function volume_toggle_details(env)
 				for device in string.gmatch(available, "[^\r\n]+") do
 					local color = colors.grey
 					if current == device then
-						color = colors.white
+						color = colors.text
 					end
 					sbar.add("item", "volume.device." .. counter, {
 						position = "popup." .. volume_bracket.name,
@@ -162,7 +162,7 @@ local function volume_toggle_details(env)
 							.. '" && sketchybar --set /volume.device\\.*/ label.color='
 							.. colors.grey
 							.. " --set $NAME label.color="
-							.. colors.white,
+							.. colors.text,
 					})
 					counter = counter + 1
 				end
