@@ -33,8 +33,8 @@ outer.bottom =     10
 outer.top =        10
 outer.left =       10
 outer.right =      10
-inner.horizontal = 20
-inner.vertical =   20
+inner.horizontal = 10
+inner.vertical =   10
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true  # If you don't touch "exec" section,
@@ -184,42 +184,17 @@ enter = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'org.qutebrowser.qutebrowser'
-run = ['layout tiling', 'move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = ['layout tiling', 'move-node-to-workspace 1']
-
-[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'              
-run = ['move-node-to-workspace 9']  
+if.app-id = 'com.vivaldi.Vivaldi'
+run = ['layout tiling', 'move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'              
-run = ['move-node-to-workspace 7']  
+if.app-id = 'md.obsidian'
+run = ['layout tiling', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'              
-run = ['move-node-to-workspace 8']  
-
-[[on-window-detected]]
-if.app-id = 'com.bitwarden.desktop'              
-run = ['move-node-to-workspace 10']  
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.edgemac'              
-run = ['move-node-to-workspace 4']  
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.rdc.macos'              
-run = ['move-node-to-workspace 5']  
-
-[[on-window-detected]]
-if.app-id = 'org.jkiss.dbeaver.core.product'              
-run = ['move-node-to-workspace 6']  
-
+if.app-id = 'com.spotify.client'
+run = ['layout tiling', 'move-node-to-workspace 4']

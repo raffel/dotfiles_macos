@@ -18,14 +18,11 @@ local cal = sbar.add("item", "widgets.calendar", {
 		string = icons.calendar,
 		color = colors.white,
 		padding_left = 8,
-		-- font = {
-		-- 	size = 22.0,
-		-- },
 	},
 	label = {
 		color = colors.white,
 		padding_right = 8,
-		width = 80,
+		width = 105,
 		align = "right",
 		font = {
 			family = settings.icons,
@@ -36,20 +33,11 @@ local cal = sbar.add("item", "widgets.calendar", {
 	padding_left = 1,
 	padding_right = 1,
 	background = {
-		color = colors.bg2,
+		color = colors.bg1,
 		border_color = colors.rainbow[#colors.rainbow],
 		border_width = 1,
 	},
 })
-
--- Double border for calendar using a single item bracket
--- sbar.add("bracket", { cal.name }, {
---   background = {
---     color = colors.transparent,
---     height = 30,
---     border_color = colors.grey,
---   }
--- })
 
 -- Padding item required because of bracket
 sbar.add("item", {
@@ -59,7 +47,6 @@ sbar.add("item", {
 
 cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
 	cal:set({
-		--icon = "",
-		label = os.date("%m/%d %H:%M"),
+		label = os.date("%a %b %d %H:%M"),
 	})
 end)

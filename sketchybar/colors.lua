@@ -18,8 +18,7 @@ return {
 		bg = 0xc02c2e34,
 		border = 0xff7f8490,
 	},
-	bg1 = 0xff363944,
-	bg2 = 0xff414550,
+	bg1 = 0xff45475a,
 
 	rainbow = {
 		0xfff2cdcd,
